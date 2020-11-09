@@ -35,7 +35,7 @@ class Deletar extends Component {
     componentDidMount() {
         const { idCliente } = this.props.match.params;
  
-        fetch(`http://localhost:3003/sistema/cliente/${idCliente}`)
+        fetch(`https://clientebd.herokuapp.com/sistema/cliente/${idCliente}`)
             .then(data => {
                 data.json().then(data => {
                     if (data.error) {

@@ -128,7 +128,7 @@ class novo extends Component {
     };
  
     handleSubmit = event => {
-        fetch("http://localhost:3003/sistema/cliente", {
+        fetch("https://clientebd.herokuapp.com/sistema/cliente", {
             method: "post",
             body: JSON.stringify(this.state.cliente),
             headers: {

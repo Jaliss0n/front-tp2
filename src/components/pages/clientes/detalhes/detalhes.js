@@ -16,7 +16,7 @@ export default class Detalhes extends Component {
     componentDidMount() {
         const { idCliente } = this.props.match.params;
  
-        fetch(`http://localhost:3003/sistema/cliente/${idCliente}`)
+        fetch(`https://clientebd.herokuapp.com/sistema/cliente/${idCliente}`)
             .then(cliente =>
                 cliente.json().then(cliente => this.setState({ cliente: cliente }))
             )
