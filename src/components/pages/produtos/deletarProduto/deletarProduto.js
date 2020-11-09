@@ -96,7 +96,7 @@ class DeletarProduto extends Component {
     handleClick = event => {
         const {  idProduto } = this.props.match.params;
  
-        fetch(`http://localhost:3003/sistema/produtos/${idProduto}`, {
+        fetch(`https://clientebd.herokuapp.com/sistema/produtos/${idProduto}`, {
             method: "delete"
         })
             .then(data => {
