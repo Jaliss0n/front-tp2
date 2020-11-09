@@ -35,7 +35,7 @@ class EditarProdutos extends Component {
     componentDidMount() {
         const {  idProduto } = this.props.match.params;
  
-        fetch(`http://localhost:3003/sistema/produtos/${idProduto}`)
+        fetch(`https://clientebd.herokuapp.com/sistema/produtos/${idProduto}`)
             .then(data => {
                 data.json().then(data => {
                     if (data.error) {

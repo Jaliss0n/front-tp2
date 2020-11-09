@@ -18,7 +18,7 @@ export default class Pedidos extends Component{
     };
  
     componentDidMount() {
-        fetch(`http://localhost:3003/sistema/pedidos`)
+        fetch(`https://clientebd.herokuapp.com/sistema/pedidos`)
             .then(pedidos =>
                 pedidos.json().then(pedidos => this.setState({ pedidos: pedidos }))
             )

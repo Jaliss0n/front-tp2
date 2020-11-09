@@ -18,14 +18,14 @@ export default class DetalhesPed extends Component {
     
     componentDidMount() {
         const {  idPedido } = this.props.match.params;
-         fetch(`http://localhost:3003/sistema/pedidos/${idPedido}`)
+         fetch(`https://clientebd.herokuapp.com/sistema/pedidos/${idPedido}`)
             .then( pedidos =>{
                 //await console.log(pedidos.json());
                 pedidos.json().then(pedido => {
-                    fetch(`http://localhost:3003/sistema/cliente/${pedido.clienteId}`)
+                    fetch(`https://clientebd.herokuapp.com/sistema/cliente/${pedido.clienteId}`)
                         .then( cliente => { 
                             cliente.json().then(cliente => {
-                                fetch(`http://localhost:3003/sistema/produtos/${pedido.produtoId}`)
+                                fetch(`https://clientebd.herokuapp.com/sistema/produtos/${pedido.produtoId}`)
                                     .then( produtos =>{
                                         produtos.json().then(produtos => {pedido.produtos = produtos; console.log(pedido); pedido.cliente = cliente; console.log(pedido); this.setState({ cliente: cliente }); this.setState({pedidos:pedido}); this.setState({ produtos: produtos });})
                                     }

@@ -114,7 +114,7 @@ class novoPedido extends Component {
     };
  
     handleSubmit = event => {
-        fetch("http://localhost:3003/sistema/pedidos", {
+        fetch("https://clientebd.herokuapp.com/sistema/pedidos", {
             method: "post",
             body: JSON.stringify(this.state.pedidos),
             headers: {

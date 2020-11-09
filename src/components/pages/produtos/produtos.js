@@ -17,7 +17,7 @@ export default class Produto extends Component{
     };
  
     componentDidMount() {
-        fetch(`http://localhost:3003/sistema/produtos`)
+        fetch(`https://clientebd.herokuapp.com/sistema/produtos`)
             .then(produto =>
                 produto.json().then(produto => this.setState({ produto: produto }))
             )

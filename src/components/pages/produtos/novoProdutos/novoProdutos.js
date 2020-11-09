@@ -129,7 +129,7 @@ class novoProduto extends Component {
     };
  
     handleSubmit = event => {
-        fetch("http://localhost:3003/sistema/produtos", {
+        fetch("https://clientebd.herokuapp.com/sistema/produtos", {
             method: "post",
             body: JSON.stringify(this.state.produto),
             headers: {

@@ -35,7 +35,7 @@ class DeletarPedido extends Component {
     componentDidMount() {
         
         const { idPedido } = this.props.match.params;
-        fetch(`http://localhost:3003/sistema/pedidos/${idPedido}`)
+        fetch(`https://clientebd.herokuapp.com/sistema/pedidos/${idPedido}`)
             .then(data => {
                 data.statusText().then(data => {
                     if (data.error) {
@@ -96,7 +96,7 @@ class DeletarPedido extends Component {
     handleClick = event => {
         const { idPedido } = this.props.match.params;
  
-        fetch(`http://localhost:3003/sistema/pedidos/${idPedido}`, {
+        fetch(`https://clientebd.herokuapp.com/sistema/pedidos/${idPedido}`, {
             method: "delete"
         })
             .then(data => {
