@@ -149,7 +149,7 @@ class EditarProdutos extends Component {
     handleSubmit = event => {
         const { idProduto } = this.state.produto;
  
-        fetch(`http://localhost:3003/sistema/produtos/${idProduto}`, {
+        fetch(`https://clientebd.herokuapp.com/sistema/produtos/${idProduto}`, {
             method: "put",
             body: JSON.stringify(this.state.produto),
             headers: {
